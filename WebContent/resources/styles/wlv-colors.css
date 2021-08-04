@@ -1,13 +1,8 @@
 @charset "UTF-8";
 
-
-
 /******** SECTION: MY VARIABLES FOR COLOR SCHEME. ********/
 :root {
-
-	
 	/* BLOCK: WHITE PIGMENTS & WHITE COLOR VARIANTIONS. */
-	
 	/* Hot White for this project. */  
 	--wR: 255;  
 	--wG: 254;  
@@ -26,7 +21,6 @@
 	
 	
 	/* BLOCK: BACK PIGMENTS & BLACK COLOR VARIANTIONS. */  
-	
 	/* Hot Back for this project.*/
 	--kR: 0;  
 	--kG: 1;  
@@ -36,7 +30,7 @@
 	--skG: calc(var(--kG) + 32);  
 	--skB: calc(var(--kB) + 30);  
 	--smoothblack: rgba(var(--skR), var(--skG), var(--skB), 1);
-
+	
 	
 	/* BLOCK: GRAY PIGMENTS & GRAY COLOR VARIANTIONS. */  
 	--grR: 128;  
@@ -53,10 +47,10 @@
 	--dgrG: calc(var(--grG) - 64);
 	--dgrB: calc(var(--grB) - 64); 
 	--dgray: rgba(var(--dgrR), var(--dgrG), var(--dgrB), 1);
-
-
+	
+	
 	/* BLOCK: RGB COLORS PIGMENTS & RGB COLOR VARIANTS. */
-	/* OBS: RGB = PRIMARY-FROM-LIGHT-COLORS. */  
+	/* OBS: RGB = PRIMARY-FROM-LIGHT-COLORS. */
 	
 	/* Red: Pure , Lite, eXtra-Lite, Dark, eXtra-Dark. */
 	--rR: 255;
@@ -194,6 +188,7 @@
 	--xdyB: calc(var(--yB) - 0);
 	--xdyellow: rgba(var(--xdyR), var(--xdyG), var(--xdyB), 1);
 	
+	
 	/* BLOCK: ORANGE PIGMENTS & ORANGE COLOR VIRIANTS. */
 	/* OBS: ORANGE IS NOT PRESENT IN OTHERS COLOR SYSTEMS ABOVE. */  
 	
@@ -220,18 +215,17 @@
 	--xdorange: rgba(var(--xdoR), var(--xdoG), var(--xdoB), 1);  
 
 
-	/* SPECIAL BLOCK: SET HERE YOUR FAVORITE COLOR, AND ITS COUNTERCOLOR. */
-	/* A kind of Petroil Blue. My favorite color. */  
-	--mycolorR: 68;
-	--mycolorG: 116;
-	--mycolorB: 138;
+	/* SPECIAL BLOCK: PROJECT'S MAIN COLOR, AND ITS COUNTERCOLOR. */
+	--mycolorR: 200;
+	--mycolorG: 216;
+	--mycolorB: 255;
 	--mycolorA: 1;
 	--mycolor: rgba(var(--mycolorR), var(--mycolorG), var(--mycolorB), var(--mycolorA));
 	
 	/* A kind of Cooper Orange. My favorite countercolor. */	
-	--mycountercolorR: calc(calc(255 - var(--mycolorR)) + 8) ;
-	--mycountercolorG: calc(calc(255 - var(--mycolorG)) - 8) ;
-	--mycountercolorB: calc(calc(255 - var(--mycolorB)) - 8) ;
+	--mycountercolorR: calc(calc(255 - var(--mycolorR)) + 32) ;
+	--mycountercolorG: calc(calc(255 - var(--mycolorG)) + 32) ;
+	--mycountercolorB: calc(calc(255 - var(--mycolorB)) + 32) ;
 	--mycountercolorA: 1;
 	--mycountercolor: rgba(var(--mycountercolorR), var(--mycountercolorG), var(--mycountercolorB), var(--mycountercolorA));
 	

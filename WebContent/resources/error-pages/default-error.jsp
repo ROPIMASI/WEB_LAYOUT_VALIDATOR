@@ -11,7 +11,7 @@
 	<%@ page isErrorPage="true" %>
 		
 	<h1>WEB LAYOUT VALIDATOR</h1>
-	<H2>Página de erro padrão</H2>
+	<H2>Página de erro padrão.</H2>
 	<h4>Exception = <%= exception %>.</h4>
 </body>
 </html>

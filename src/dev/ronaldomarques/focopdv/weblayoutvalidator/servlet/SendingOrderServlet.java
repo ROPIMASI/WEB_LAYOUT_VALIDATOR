@@ -13,21 +13,21 @@ import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 
 
 
-@WebServlet("/OrderShippingServlet")
+@WebServlet("/SendingOrderServlet")
 @MultipartConfig
-public class OrderShippingServlet extends HttpServlet {
+public class SendingOrderServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	
 	
 	
 	/* Constructor. */
-	public OrderShippingServlet() {
+	public SendingOrderServlet() {
 		
 		super();
 		
 	}
-	
+//	
 	
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -43,6 +43,8 @@ public class OrderShippingServlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		var fileName = new String();
+		var fileContentType = new String();
+		int fileNumberOfLines = 0;
 		
 		/* Init RequestDispatcher before loop or try-catch-blocks, init once, use several. */
 		RequestDispatcher reqDisp = null;
@@ -54,9 +56,11 @@ public class OrderShippingServlet extends HttpServlet {
 				
 				// Get the text file on page field(parameter/part) to be validated.
 				if ((request.getPart("textFileUpload") != null) && ServletFileUpload.isMultipartContent(request))
-				fileName = request.getPart("textFileUpload").getName();
+				fileName = request.getPart("textFileUpload").getSubmittedFileName();
+				fileContentType = request.getPart("textFileUpload").getContentType();
 				/* JUST A EXAMPLE OF FILE MANIPULATING ! */
 				//fileName = "validate case / yes one file";
+				fileNumberOfLines = 1;
 				
 				break;
 			
@@ -66,7 +70,8 @@ public class OrderShippingServlet extends HttpServlet {
 				break;
 		}
 		
-		reqDisp = request.getRequestDispatcher("/index.jsp?filename=" + fileName);
+		reqDisp = request.getRequestDispatcher("/sendingOrder.jsp?filename=" + fileName + "&filecontenttype=" + fileContentType +
+				"&filenumberoflines=" + fileNumberOfLines);
 		reqDisp.forward(request, response);
 		
 	}

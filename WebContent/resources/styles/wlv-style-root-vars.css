@@ -11,7 +11,7 @@
 	--f-w-bold: calc(var(--f-w-normal) + 300); /* Font Weight Bold */
 
 	/* From 1 to 90, step 1, being 12. */  
-	--font-size-ref: 12px;  
+	--font-size-ref: 14px;  
 	--f-s-normal: var(--font-size-ref); /* Font Size Normal */  
 	--f-s-small: calc(var(--f-s-normal) - 2px); /* Font Size Small */
 	--f-s-smaller: calc(var(--f-s-normal) - 4px); /* Font Size Small */
