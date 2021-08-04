@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="resources/styles/wlv-style-buttons.css">
 	<link rel="stylesheet" type="text/css" href="resources/styles/wlv-style-forms.css">
 -->
-<title>Sending Order - <jsp:include page="resources/pages-parts/title.jsp" /></title>
+<title>Return Order - <jsp:include page="resources/pages-parts/title.jsp" /></title>
 </head>
 <body>
 	<!-- JSP directives/notations to page functionality. -->
@@ -26,11 +26,11 @@
 
 	<h1>WEB LAYOUT VALIDATOR</h1>
 	<br/>
-	<h3>SENDING ORDER: UPLOAD</h3>
+	<h3>RETURN ORDER: UPLOAD</h3>
 	<br/>
 	<br/>
 	<br/>
-	<form id="layoutUpload" name="layoutUpload" action="SendingOrderServlet?action=validate" method="post" enctype="multipart/form-data">
+	<form id="layoutUpload" name="layoutUpload" action="ReturnOrderServlet?action=validate" method="post" enctype="multipart/form-data">
 	<p>
 		Choose file: <input type="file" id="textFileUpload" name="textFileUpload" tabindex="1"> 
 		, <input type="submit" value="Validate this file!" tabindex="2">	

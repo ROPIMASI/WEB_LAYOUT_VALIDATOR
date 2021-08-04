@@ -28,7 +28,7 @@
 	<br/>
 	<a href="sendingOrder.jsp" target="blank"><h3>Sending Order</h3></a>
 	<br/>
-	<a href=#><h3>Return Order</h3></a>
+	<a href="returnOrder.jsp" target="blank"><h3>Return Order</h3></a>
 	<br/>
 	<a href=#><h3>Return Canceled Order</h3></a>
 	<br/>
