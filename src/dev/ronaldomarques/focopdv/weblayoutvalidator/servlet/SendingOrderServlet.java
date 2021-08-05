@@ -27,7 +27,6 @@ public class SendingOrderServlet extends HttpServlet {
 		super();
 		
 	}
-//	
 	
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -53,6 +52,8 @@ public class SendingOrderServlet extends HttpServlet {
 		switch (request.getParameter("action")) {
 			case "validate":
 				request.setAttribute("lastAction", "validate");
+				
+				// FIXME: BLOCO TEMPORARIO SÓ PARA ENTREGAR A ESTRUTURA DA PÁGINA.
 				
 				// Get the text file on page field(parameter/part) to be validated.
 				if ((request.getPart("textFileUpload") != null) && ServletFileUpload.isMultipartContent(request))

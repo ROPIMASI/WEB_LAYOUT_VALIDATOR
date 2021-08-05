@@ -29,14 +29,9 @@
 	<h3>RETURN ORDER: UPLOAD</h3>
 	<br/>
 	<br/>
-	<br/>
-	<form id="layoutUpload" name="layoutUpload" action="ReturnOrderServlet?action=validate" method="post" enctype="multipart/form-data">
-	<p>
-		Choose file: <input type="file" id="textFileUpload" name="textFileUpload" tabindex="1"> 
-		, <input type="submit" value="Validate this file!" tabindex="2">	
-	</p>
-	</form>
-	<br/>
+		<form id="layoutUpload" name="layoutUpload" action="ReturnOrderServlet?action=validate" method="post" enctype="multipart/form-data">
+		Choose file: <input type="file" id="textFileUpload" name="textFileUpload" tabindex="1"> , <input type="submit" value="Validate this file!" tabindex="2">	
+		</form>
 	<br/>
 	<br/>
 	<h4>RESULT:</h4>
@@ -55,16 +50,7 @@
 	<br/>
 	<br/>
 	<h6>File content:</h6>
-	<div class="layoutfilecontent">
-		<%= request.getParameter("filename") %><%= request.getParameter("filename") %>
-		<br/>
-		<%= request.getParameter("filename") %><%= request.getParameter("filename") %><%= request.getParameter("filename") %><%= request.getParameter("filename") %>
-		<br/>
-		<%= request.getParameter("filename") %><%= request.getParameter("filename") %><%= request.getParameter("filename") %>
-		<br/>
-		<%= request.getParameter("filename") %>
-		<br/>
-	</div>
+	<textarea class="layoutfilecontent" cols="40" rows="8"><%= request.getParameter("filetextualcontent") %></textarea>
 	<br/>
 	<br/>
 	<br/>
