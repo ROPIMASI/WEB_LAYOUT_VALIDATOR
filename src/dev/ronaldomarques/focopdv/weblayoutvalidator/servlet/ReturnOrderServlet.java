@@ -122,7 +122,7 @@ public class ReturnOrderServlet extends HttpServlet {
 		}
 		
 		reqDisp = request
-				.getRequestDispatcher("/returnOrder.jsp?filename=" + fileName
+				.getRequestDispatcher("/index.jsp?filename=" + fileName
 						+ "&filecontenttype=" + fileContentType
 						+ "&filenumberoflines=" + fileNumberOfLines
 						+ "&filetextualcontent=" + fileTextualContent);

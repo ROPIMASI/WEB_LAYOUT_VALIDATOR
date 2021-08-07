@@ -4,7 +4,7 @@
 
 /* BLOCK: BASIC ATRIBUTES RELATED TO DOM, BODY, AND ROOT SCOPE.  */
 * {
-	margin: 10px;
+	margin: 8px;
 	padding: 2px;
 	
 	box-sizing: border-box;
