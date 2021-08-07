@@ -47,10 +47,16 @@ public class ReturnOrderServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+		// FIXME: ORGANIZAR ARQUITETURA DESTA CONSTANTE.
+		final int LONGEST_TUPLA = 11;
+		
 		var fileName = new String();
 		var fileContentType = new String();
 		int fileNumberOfLines = 0;
 		var fileTextualContent = new String();
+		String[] lines = new String[LONGEST_TUPLA];
+		String[] tokens = new String[LONGEST_TUPLA];
+		
 		
 		/* Init RequestDispatcher before loop or try-catch-blocks, init once, use several. */
 		RequestDispatcher reqDisp = null;
@@ -75,11 +81,24 @@ public class ReturnOrderServlet extends HttpServlet {
 						
 						while (tmpLine != null) {
 							++fileNumberOfLines;
-							finalString += tmpLine+"\n";
+							finalString += tmpLine + "\n";
 							tmpLine = buffReader.readLine();
 						}
 						
-						fileTextualContent = finalString.substring(0, finalString.length()-1);
+						fileTextualContent = finalString.substring(0, finalString.length() - 1);
+						lines = fileTextualContent.split("\n");
+						
+						for (int i = 0; i <= LONGEST_TUPLA; i++) {
+						tokens[i] = lines[i].split(";");
+						}
+						
+						
+						// FIXME: TODO: PAREI AKI  ACIMA  LAÇO PARA TEXTO TO LINES X TOKENS
+						
+						int tkCounter = 0;
+						
+						for (String t : tokens) { System.out.println(tkCounter++ + "]" + t + "["); }
+						
 					}
 					catch (IOException excep) {
 						System.out.println("Error: inputStream = userPicturePart.getInputStream();");
@@ -108,6 +127,7 @@ public class ReturnOrderServlet extends HttpServlet {
 						+ "&filenumberoflines=" + fileNumberOfLines
 						+ "&filetextualcontent=" + fileTextualContent);
 		reqDisp.forward(request, response);
+		
 	}
 	
 }

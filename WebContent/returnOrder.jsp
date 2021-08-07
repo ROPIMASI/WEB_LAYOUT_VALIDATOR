@@ -4,19 +4,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Return Order - <jsp:include page="resources/pages-parts/title.jsp" /></title>
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
- 
+<!--
 	<link rel="stylesheet" type="text/css" href="resources/styles/wlv-colors.css">
 	<link rel="stylesheet" type="text/css" href="resources/styles/wlv-style-fonts.css">
 	<link rel="stylesheet" type="text/css" href="resources/styles/wlv-style-root-vars.css">
 	<link rel="stylesheet" type="text/css" href="resources/styles/wlv-style-basics.css">
-<!--
 	<link rel="stylesheet" type="text/css" href="resources/styles/wlv-style-grids.css">
 	<link rel="stylesheet" type="text/css" href="resources/styles/wlv-style-buttons.css">
 	<link rel="stylesheet" type="text/css" href="resources/styles/wlv-style-forms.css">
 -->
-<title>Return Order - <jsp:include page="resources/pages-parts/title.jsp" /></title>
+<!-- Bootstrap-CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
 </head>
 <body>
 	<!-- JSP directives/notations to page functionality. -->
@@ -58,5 +60,11 @@
 	<br/>
 	<br/>
 	<br/>
+
+	<!-- Primeiro o jQuery-JS, depois o Popper-JS, e depois o Bootstrap-JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
 </body>
 </html>
